@@ -10,4 +10,8 @@ class Profile extends Model
 {
     use HasFactory;
 
+    //Relacion uno a uno Inversa
+    public function user():BelongsTo{
+        return $this->belongsTo(User::class);
+    }
 }
