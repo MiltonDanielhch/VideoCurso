@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 class Lesson extends Model
 {
     use HasFactory;
-
+    protected $guarded = ['id'];
     //Relacion uno a uno
     public function description():HasOne{
         return $this->hasOne(Description::class);
